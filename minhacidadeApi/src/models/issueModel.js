@@ -9,6 +9,14 @@ let issueSchema = new Schema({
         type: String,
         enum: ['limpeza', 'pintura', 'iluminação', 'jardinagem'],
     },
+    status: {
+        type: String,
+        enum: ['aberto', 'em andamento', 'concluido'],
+    },
+    local: String,
+    observacaoCriador: String,
+    observacaoSolucionador: String,
+    observacaoAvaliador: String,
     userReport: Schema.Types.ObjectId,
     userResolved: Schema.Types.ObjectId,
     observacao: String
