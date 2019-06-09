@@ -1,52 +1,46 @@
 <ion-header>
 	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button text="Voltar" [icon]="buttonIcon">
+			</ion-back-button>
+		</ion-buttons>
 		<ion-title>
 			Desafios
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
 
-<div class="bodyContainer">
-	<ion-card class="desafiosContainer">
-		<ion-card-content>
-			<ion-list class="list" ngFor="let item of desafios">
-				<ion-item (click)="resolver()">
-					<div class="points">+ 10</div>
-					<ion-label>Plantar Arvore</ion-label>
-				</ion-item>
-				<ion-item>
-					<div class="points">+ 10</div>
-					<ion-label>Cortar Grama</ion-label>
-				</ion-item>
-				<ion-item>
-					<div class="points">+ 10</div>
-					<ion-label>Trocar Lampada</ion-label>
-				</ion-item>
-				<ion-item>
-					<div class="points">+ 10</div>
-					<ion-label>Remoção de Lixo</ion-label>
-				</ion-item>
-			</ion-list>
-		</ion-card-content>
+<ion-content class="pt-5">
+	<ion-card class="mt-1" *ngFor="let desafio of desafios">
+		<ion-item>
+			<ion-avatar slot="start">
+				<img [src]="desafio.img">
+			</ion-avatar>
+			<ion-label>
+				<h2>{{desafio.titulo}}</h2>
+				<div class="form-inline">
+					<div class="col-6 pl-0">
+						<div class="form-inline">
+							<img src="assets/icon/moeda.svg" style="width:15px; margin-right: 3px">
+							<p>+{{desafio.moeda}} pontos</p>
+						</div>
+						<div class="form-inline">
+							<img src="assets/icon/tempo.svg" style="width:15px; margin-right: 3px">
+							<p>Há {{desafio.diasAtivo}} dias</p>
+						</div>
+					</div>
+					<div class="col-6">
+						<ion-button class="mt-3" color="primary" (click)="verMais()">Ver Mais</ion-button>
+					</div>
+				</div>
+			</ion-label>
+		</ion-item>
 	</ion-card>
-
-	<ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/desafio-create">
+	<ion-button class="mt-3" color="primary" expand="block" routerLink="/desafio-create">Lançar novo desafio</ion-button>
+	<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/desafio-create">
 		<ion-fab-button>
 			<ion-icon name="add"></ion-icon>
 		</ion-fab-button>
-	</ion-fab>
+	</ion-fab> -->
 
-	<!--<ion-fab vertical="bottom" horizontal="end" slot="fixed">-->
-		<!--<ion-fab-button>-->
-			<!--<ion-icon name="arrow-dropup"></ion-icon>-->
-		<!--</ion-fab-button>-->
-
-		<!--<ion-fab-list side="top">-->
-			<!--<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>-->
-		<!--</ion-fab-list>-->
-
-		<!--<ion-fab-list side="start">-->
-			<!--<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>-->
-		<!--</ion-fab-list>-->
-	<!--</ion-fab>-->
-</div>
+</ion-content>

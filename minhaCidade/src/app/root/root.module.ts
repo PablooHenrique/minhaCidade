@@ -14,6 +14,8 @@ import {PerfilPage} from '../perfil/perfil.page';
 import {TabsPage} from '../tabs/tabs.page';
 import {DesafiosCreatePage} from '../desafio/create/desafios-create.page';
 import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-create-finished.page';
+import { DesafioDetailPage } from '../desafio/detail/desafio-detail.page';
+import { DetailMeuDesafioPage } from '../desafio/detail-meu-desafio/detail-meu-desafio.page';
 
 @NgModule({
 	imports: [
@@ -30,8 +32,11 @@ import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-cr
 		DesafioListPage,
 		DesafiosCreatePage,
 		DesafiosCreateFinishedPage,
+		DetailMeuDesafioPage,
+		DesafioDetailPage,
 		PerfilPage,
-		TabsPage
+		TabsPage,
+
 	],
 	providers: [LoginService]
 
