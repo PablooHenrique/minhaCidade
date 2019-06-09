@@ -1,0 +1,32 @@
+{
+    "name": "messenger-chatbot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "actions-on-google": "^2.6.0",
+        "axios": "^0.18.0",
+        "bcrypt": "^3.0.6",
+        "body-parser": "^1.18.3",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.4",
+        "dialogflow": "^0.8.2",
+        "dialogflow-fulfillment": "git+https://github.com/naranjja/dialogflow-fulfillment-nodejs.git",
+        "express": "^4.16.4",
+        "express-load": "^1.1.16",
+        "express-session": "^1.16.1",
+        "jade": "^1.11.0",
+        "mongoose": "^5.5.2",
+        "mongoose-auto-increment": "^5.0.1",
+        "mongoose-findorcreate": "^3.0.0",
+        "nodemon": "^1.18.11",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0"
+    }
+}

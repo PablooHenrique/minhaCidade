@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Minha Goiânia">
+    <meta property="og:description" content="Software que engaja pessoas para cuidar de parques e praças de Goiânia.">
+    <meta property="og:image" content="./images/thumbnail.png">
+    <meta property="og:type" content="website">
+    <title>Minha Goiânia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+</head>
+
+<body class="text-center">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+    </script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="340100449962883" logged_in_greeting="Bem-vindo! Caso precise, estou aqui pra te ajudar! ;) " logged_out_greeting="Oi! Caso precise de ajuda, faça login no facebook e converse comigo. :D"></div>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Minha Goiânia</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="http://anuardaher.com">Prefeitura de Goiânia</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <img src="./images/minhagoiania.jpeg" class="rounded mx-auto d-block">
+            <h1 class="cover-heading">Minha Goiânia</h1>
+            <p class="lead">Adote parques e praças de Goiânia e nos ajude a preservar o que é de todos nós.</p>
+
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Desenvolvido por <a href="https://anuardaher.com/">Minha Goiânia </a><span id='ano'></span>.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let anoDiv = document.getElementById('ano')
+        let anoAtual = new Date().getFullYear();
+        anoDiv.append(anoAtual);
+    })
+</script>
+
+</html>
