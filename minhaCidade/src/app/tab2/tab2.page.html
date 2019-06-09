@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Minhas conquistas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <div class="container pt-4">
+    <div class="d-flex align-items-center mb-5" *ngFor="let conquista of conquistas; let i=index">
+      <div class="col-4" *ngIf="(i+1)/2==1">
+        <img class="img-fluid" [src]="conquista.img">
+      </div>
+      <div class="col-8">
+        <p class="mb-0">{{conquista.titulo}}</p>
+        <p class="mb-0 text-descricao">+{{conquista.moedas}} moedas</p>
+        <p class="mb-1 text-descricao">{{conquista.descricao}}</p>
+      </div>
+      <div class="col-4" *ngIf="!((i+1)/2==1)">
+        <img class="img-fluid" [src]="conquista.img">
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -7,6 +7,9 @@ import {RootPageRoutingModule} from './root.router.module';
 import {RootPage} from './root.page';
 import {UserCreatePage} from '../user/user-create/user-create.page';
 import { Tab1Page } from '../tab1/tab1.page';
+import { Tab2Page } from '../tab2/tab2.page';
+import { Tab3Page } from '../tab3/tab3.page';
+import { ParceirosPage } from '../parceiros/parceiros.page.';
 
 @NgModule({
 	imports: [
@@ -16,6 +19,6 @@ import { Tab1Page } from '../tab1/tab1.page';
 		RootPageRoutingModule,
 		
 	],
-	declarations: [RootPage, UserCreatePage, Tab1Page]
+	declarations: [RootPage, UserCreatePage, Tab1Page, Tab2Page, Tab3Page, ParceirosPage]
 })
 export class RootPageModule {}

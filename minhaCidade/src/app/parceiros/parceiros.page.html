@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Parceiros
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container pt-4">
+    <div class="text-center">
+      <h2 class="text-primary">Nossos Parceiros</h2>
+    </div>
+    <ion-card class="mt-4">
+      <ion-list>
+        <ion-item *ngFor="let parceiro of parceiros">
+          <ion-label>
+            <p class="mb-0">{{parceiro.nome}}</p>
+            <p class="item-endereco">{{parceiro.endereco}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>
