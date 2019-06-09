@@ -8,6 +8,7 @@ import { Tab2Page } from '../tab2/tab2.page';
 import { Tab3Page } from '../tab3/tab3.page';
 import { ParceirosPage } from '../parceiros/parceiros.page.';
 import {DesafioListPage} from '../desafio/list/desafio-list.page';
+import {PerfilPage} from '../perfil/perfil.page';
 
 const routes: Routes = [
 	{
@@ -19,24 +20,66 @@ const routes: Routes = [
 		component: UserCreatePage,
 	},
 	{
-		path: 'perfil/inicio',
-		component: Tab1Page,
+		path: 'perfil',
+		component: PerfilPage,
 	},
+	// {
+	// 	path: 'perfil/inicio',
+	// 	component: Tab1Page,
+	// },
 	{
 		path: 'desafio-list',
 		component: DesafioListPage,
 	},
-	{
-		path: 'perfil/conquistas',
-		component: Tab2Page,
-	},
-	{
-		path: 'perfil/minha-carteira',
-		component: Tab3Page,
-	},
+	// {
+	// 	path: 'perfil/conquistas',
+	// 	component: Tab2Page,
+	// },
+	// {
+	// 	path: 'perfil/minha-carteira',
+	// 	component: Tab3Page,
+	// },
 	{
 		path: 'parceiros',
 		component: ParceirosPage,
+	},
+	{
+		path: 'tabs',
+		component: TabsPage,
+		children: [
+			{
+				path: 'tab1',
+				children: [
+					{
+						path: '',
+						loadChildren: '../tab1/tab1.module#Tab1PageModule'
+					}
+				]
+			},
+			{
+				path: 'tab2',
+				children: [
+					{
+						path: '',
+						loadChildren: '../tab2/tab2.module#Tab2PageModule'
+					}
+				]
+			},
+			{
+				path: 'tab3',
+				children: [
+					{
+						path: '',
+						loadChildren: '../tab3/tab3.module#Tab3PageModule'
+					}
+				]
+			},
+			{
+				path: '',
+				redirectTo: '/tabs/tab1',
+				pathMatch: 'full'
+			}
+		]
 	},
 	{
 		path: '',

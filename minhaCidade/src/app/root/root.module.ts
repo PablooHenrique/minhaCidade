@@ -13,6 +13,8 @@ import {ParceirosPage} from '../parceiros/parceiros.page.';
 import {DesafioListPage} from '../desafio/list/desafio-list.page';
 import {LoginService} from '../services/login.service';
 import {HttpClientModule} from '@angular/common/http';
+import {PerfilPage} from '../perfil/perfil.page';
+import {TabsPage} from '../tabs/tabs.page';
 
 @NgModule({
 	imports: [
@@ -22,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
 		RootPageRoutingModule,
 		HttpClientModule
 	],
-	declarations: [RootPage, UserCreatePage, Tab1Page, Tab2Page, Tab3Page, ParceirosPage, DesafioListPage],
+	declarations: [RootPage, UserCreatePage, ParceirosPage, DesafioListPage, PerfilPage, TabsPage],
 	providers: [LoginService]
 
 })

@@ -12,7 +12,7 @@ export class RootPage {
 	constructor(private router: Router, private _loginService: LoginService) {}
 
 	login() {
-		this.router.navigate(['/perfil/inicio']);
+		this.router.navigate(['/tabs']);
 	}
 
 	cadastrarUsuario() {
