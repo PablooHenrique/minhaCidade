@@ -1,8 +1,12 @@
-<div class="bodyContainer">
-	<div class="headerContainer">
-		<h3>Desafios</h3>
-	</div>
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Desafios
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
 
+<div class="bodyContainer">
 	<ion-card class="desafiosContainer">
 		<ion-card-content>
 			<ion-list class="list" ngFor="let item of desafios">
@@ -26,17 +30,23 @@
 		</ion-card-content>
 	</ion-card>
 
-	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/desafio-create">
 		<ion-fab-button>
-			<ion-icon name="arrow-dropup"></ion-icon>
+			<ion-icon name="add"></ion-icon>
 		</ion-fab-button>
-
-		<ion-fab-list side="top">
-			<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-		</ion-fab-list>
-
-		<ion-fab-list side="start">
-			<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
-		</ion-fab-list>
 	</ion-fab>
+
+	<!--<ion-fab vertical="bottom" horizontal="end" slot="fixed">-->
+		<!--<ion-fab-button>-->
+			<!--<ion-icon name="arrow-dropup"></ion-icon>-->
+		<!--</ion-fab-button>-->
+
+		<!--<ion-fab-list side="top">-->
+			<!--<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>-->
+		<!--</ion-fab-list>-->
+
+		<!--<ion-fab-list side="start">-->
+			<!--<ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>-->
+		<!--</ion-fab-list>-->
+	<!--</ion-fab>-->
 </div>

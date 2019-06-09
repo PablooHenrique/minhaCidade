@@ -9,6 +9,8 @@ import { Tab3Page } from '../tab3/tab3.page';
 import { ParceirosPage } from '../parceiros/parceiros.page.';
 import {DesafioListPage} from '../desafio/list/desafio-list.page';
 import {PerfilPage} from '../perfil/perfil.page';
+import {DesafiosCreatePage} from '../desafio/create/desafios-create.page';
+import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-create-finished.page';
 
 const routes: Routes = [
 	{
@@ -30,6 +32,14 @@ const routes: Routes = [
 	{
 		path: 'desafio-list',
 		component: DesafioListPage,
+	},
+	{
+		path: 'desafio-create',
+		component: DesafiosCreatePage,
+	},
+	{
+		path: 'desafio-create-finished',
+		component: DesafiosCreateFinishedPage,
 	},
 	// {
 	// 	path: 'perfil/conquistas',
