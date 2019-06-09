@@ -14,6 +14,8 @@ import {PerfilPage} from '../perfil/perfil.page';
 import {TabsPage} from '../tabs/tabs.page';
 import {DesafiosCreatePage} from '../desafio/create/desafios-create.page';
 import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-create-finished.page';
+import { DesafioDetailPage } from '../desafio/detail/desafio-detail.page';
+import { DetailMeuDesafioPage } from '../desafio/detail-meu-desafio/detail-meu-desafio.page';
 import {Usuario} from '../user/user-create/usuario.model';
 import {UsuarioService} from '../user/user-create/usuario.service';
 import {DesafioService} from '../desafio/desafio.service';
@@ -33,8 +35,11 @@ import {DesafioService} from '../desafio/desafio.service';
 		DesafioListPage,
 		DesafiosCreatePage,
 		DesafiosCreateFinishedPage,
+		DetailMeuDesafioPage,
+		DesafioDetailPage,
 		PerfilPage,
-		TabsPage
+		TabsPage,
+
 	],
 	providers: [LoginService, UsuarioService, DesafioService]
 

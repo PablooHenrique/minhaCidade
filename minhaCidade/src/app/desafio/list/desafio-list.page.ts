@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {Desafio} from '../create/desafio.model';
 import {DesafioService} from '../desafio.service';
 
@@ -9,10 +10,15 @@ import {DesafioService} from '../desafio.service';
 })
 export class DesafioListPage {
 
-	desafios: Desafio[] = [];
+	desafios: any[];
 
-	constructor(desafioService: DesafioService) {
+	constructor(private route: Router, desafioService: DesafioService){
 		this.desafios = desafioService.desafios;
 	}
+
+	verMais(){
+		this.route.navigate(['desafio-detail']);
+	}
+
 
 }

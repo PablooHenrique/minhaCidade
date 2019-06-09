@@ -11,6 +11,8 @@ import {DesafioListPage} from '../desafio/list/desafio-list.page';
 import {PerfilPage} from '../perfil/perfil.page';
 import {DesafiosCreatePage} from '../desafio/create/desafios-create.page';
 import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-create-finished.page';
+import { DesafioDetailPage } from '../desafio/detail/desafio-detail.page';
+import { DetailMeuDesafioPage } from '../desafio/detail-meu-desafio/detail-meu-desafio.page';
 
 const routes: Routes = [
 	{
@@ -40,6 +42,14 @@ const routes: Routes = [
 	{
 		path: 'desafio-create-finished',
 		component: DesafiosCreateFinishedPage,
+	},
+	{
+		path: 'desafio-detail',
+		component: DesafioDetailPage,
+	},
+	{
+		path: 'meu-desafio-detail',
+		component: DetailMeuDesafioPage,
 	},
 	// {
 	// 	path: 'perfil/conquistas',

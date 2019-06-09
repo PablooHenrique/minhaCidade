@@ -4,15 +4,16 @@ import {RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {DesafioListPage} from './list/desafio-list.page';
+import { DesafioDetailPage } from './detail/desafio-detail.page';
 
 @NgModule({
 	imports: [
 		IonicModule,
 		CommonModule,
 		FormsModule,
-		RouterModule.forChild([{ path: '/desafio-list', component: DesafioListPage }])
+		RouterModule.forChild([{ path: '/desafio-list', component: DesafioListPage },{ path: '/desafio-detail', component: DesafioDetailPage }])
 	],
-	declarations: [DesafioListPage]
+	declarations: [DesafioListPage, DesafioDetailPage]
 })
 export class DesafioModule {
 
