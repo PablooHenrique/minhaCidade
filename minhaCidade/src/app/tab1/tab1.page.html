@@ -1,46 +1,49 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Minha Goiânia
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Minha Goiânia
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="container align-items-center">
-    <div class="p-3 mt-5 btn bg-light btn-block ">
-      <span>Nível: <span class="text-primary">O Síndico da Praça </span> </span>
-    </div>
-    <div class="row mt-5">
-      <div class="col-6 text-center">
-        <p class="text-primary font-weight-bold mb-1">300</p>
-        <p>gyncoins</p>
-      </div>
-      <div class="col-6 text-center">
-        <p class="text-primary font-weight-bold mb-1">5</p>
-        <p>Conquistas</p>
-      </div>
-    </div>
-    <ion-button class="font-weight-bold text-center mt-4" expand="block" color="primary">CONFERIR DESAFIOS</ion-button>
-  </div>
-  <ion-tabs>
-      <ion-tab-bar slot="bottom">
-    
-        <ion-tab-button tab="speakers">
-          <ion-icon name="home"></ion-icon>
-          <ion-label>Início</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button tab="map">
-          <ion-icon name="trophy"></ion-icon>
-          <ion-label>Conquistas</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button tab="about">
-          <ion-icon name="wallet"></ion-icon>
-          <ion-label>Carteira</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
+	<div class="container align-items-center">
+		<div class="p-3 mt-5 btn bg-light btn-block ">
+			<span>Nível: <span class="text-primary">O Síndico da Praça </span> </span>
+		</div>
+		<div class="row mt-5">
+			<div class="col-6 text-center">
+				<p class="text-primary font-weight-bold mb-1">300</p>
+				<p>gyncoins</p>
+			</div>
+			<div class="col-6 text-center">
+				<p class="text-primary font-weight-bold mb-1">5</p>
+				<p>Conquistas</p>
+			</div>
+		</div>
+		<ion-button class="font-weight-bold text-center mt-4" expand="block" color="primary"
+			(click)="conferirDesafios()"
+		>
+			CONFERIR DESAFIOS
+		</ion-button>
+	</div>
+	<ion-tabs>
+		<ion-tab-bar slot="bottom">
+			<ion-tab-button tab="" routerLink="/perfil/conquistas">
+				<ion-icon name="trophy"></ion-icon>
+				<ion-label>Conquistas</ion-label>
+			</ion-tab-button>
+
+			<ion-tab-button>
+				<ion-icon name="home"></ion-icon>
+				<ion-label>Início</ion-label>
+			</ion-tab-button>
+
+			<ion-tab-button tab="" routerLink="/perfil/minha-carteira">
+				<ion-icon name="wallet"></ion-icon>
+				<ion-label>Carteira</ion-label>
+			</ion-tab-button>
+		</ion-tab-bar>
+	</ion-tabs>
 </ion-content>
 

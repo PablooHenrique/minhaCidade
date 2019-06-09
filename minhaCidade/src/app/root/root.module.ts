@@ -6,19 +6,24 @@ import {FormsModule} from '@angular/forms';
 import {RootPageRoutingModule} from './root.router.module';
 import {RootPage} from './root.page';
 import {UserCreatePage} from '../user/user-create/user-create.page';
-import { Tab1Page } from '../tab1/tab1.page';
-import { Tab2Page } from '../tab2/tab2.page';
-import { Tab3Page } from '../tab3/tab3.page';
-import { ParceirosPage } from '../parceiros/parceiros.page.';
+import {Tab1Page} from '../tab1/tab1.page';
+import {Tab2Page} from '../tab2/tab2.page';
+import {Tab3Page} from '../tab3/tab3.page';
+import {ParceirosPage} from '../parceiros/parceiros.page.';
 import {DesafioListPage} from '../desafio/list/desafio-list.page';
+import {LoginService} from '../services/login.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
 	imports: [
 		IonicModule,
 		CommonModule,
 		FormsModule,
-		RootPageRoutingModule
+		RootPageRoutingModule,
+		HttpClientModule
 	],
-	declarations: [RootPage, UserCreatePage, Tab1Page, Tab2Page, Tab3Page, ParceirosPage, DesafioListPage]
+	declarations: [RootPage, UserCreatePage, Tab1Page, Tab2Page, Tab3Page, ParceirosPage, DesafioListPage],
+	providers: [LoginService]
+
 })
 export class RootPageModule {}

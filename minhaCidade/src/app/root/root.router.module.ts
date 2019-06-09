@@ -19,7 +19,7 @@ const routes: Routes = [
 		component: UserCreatePage,
 	},
 	{
-		path: 'tab-1',
+		path: 'perfil/inicio',
 		component: Tab1Page,
 	},
 	{
@@ -27,11 +27,11 @@ const routes: Routes = [
 		component: DesafioListPage,
 	},
 	{
-		path: 'conquistas',
+		path: 'perfil/conquistas',
 		component: Tab2Page,
 	},
 	{
-		path: 'minha-carteira',
+		path: 'perfil/minha-carteira',
 		component: Tab3Page,
 	},
 	{
