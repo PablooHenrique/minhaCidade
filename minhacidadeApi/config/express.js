@@ -5,12 +5,14 @@ var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
 var path = require('path');
+var cors = require('cors')
 
 const app = express()
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/minhagoiania", express.static("src/public"))
+app.use("/minhagoiania", express.static("src/public"));
+app.use(cors());
 
 app.all('/*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
