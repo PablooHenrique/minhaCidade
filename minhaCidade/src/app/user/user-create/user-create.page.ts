@@ -20,10 +20,16 @@ export class UserCreatePage {
 	}
 
 	async save() {
-		this._usuarioService.save(this.usuario).then(response => {
+		// this._usuarioService.save(this.usuario).then(response => {
+		// 	this.showToast('Usuário criado com sucesso.');
+		// 	this._router.navigate(['/tabs']);
+		// });
+
+		const isSaved = this._usuarioService.save(this.usuario);
+		if (isSaved) {
 			this.showToast('Usuário criado com sucesso.');
 			this._router.navigate(['/tabs']);
-		});
+		}
 	}
 
 	async showToast(msg: string) {

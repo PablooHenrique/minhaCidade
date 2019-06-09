@@ -11,22 +11,22 @@
 		<ion-card-content>
 			<ion-item>
 				<ion-label>Categoria</ion-label>
-				<ion-select placeholder="Selecione">
-					<ion-select-option value="f">Limpeza</ion-select-option>
-					<ion-select-option value="m">Pintura</ion-select-option>
-					<ion-select-option value="m">Iluminação</ion-select-option>
-					<ion-select-option value="m">Roçagem</ion-select-option>
+				<ion-select placeholder="Selecione" [(ngModel)]="desafio.categoria">
+					<ion-select-option value="Limpeza">Limpeza</ion-select-option>
+					<ion-select-option value="Pintura">Pintura</ion-select-option>
+					<ion-select-option value="Iluminação">Iluminação</ion-select-option>
+					<ion-select-option value="Roçagem">Roçagem</ion-select-option>
 				</ion-select>
 			</ion-item>
 
 			<ion-item>
 				<ion-label position="floating">Local</ion-label>
-				<ion-input></ion-input>
+				<ion-input [(ngModel)]="desafio.local" name="local"></ion-input>
 			</ion-item>
 
 			<ion-item>
 				<ion-label position="floating">Descrição</ion-label>
-				<ion-textarea></ion-textarea>
+				<ion-textarea [(ngModel)]="desafio.descricao"></ion-textarea>
 			</ion-item>
 
 			<ion-button color="primary" expand="full">Adicionar foto</ion-button>

@@ -10,16 +10,18 @@ import {Router} from '@angular/router';
 	styleUrls: ['desafios-create.page.scss']
 })
 export class DesafiosCreatePage {
-	desafio: Desafio;
+	desafio: Desafio = {pontos: '+ 15'};
 
 	constructor(private _desafioService: DesafioService, private _toast: ToastController, private _router: Router) {
 	}
 
 	async save() {
-		this._desafioService.save(this.desafio).then(response => {
+		const saved = this._desafioService.save(this.desafio);
+		if (saved) {
 			this.showToast('Desafio criado com sucesso.');
 			this._router.navigate(['/desafio-list']);
-		});
+			console.log(this._desafioService.desafios);
+		}
 	}
 
 	async showToast(msg: string) {

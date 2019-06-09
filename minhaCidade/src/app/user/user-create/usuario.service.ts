@@ -5,6 +5,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class UsuarioService {
 
+	usuarios: Usuario[] = [
+		{id: 10, nome: 'Pablo Henrique Reis Carvalho', cpf: '04129153161', senha: 'pablo'}
+	];
+
 	private static RESOURCE_PATH = 'https://anuardaher.com/minhagoiania/';
 
 	constructor(private _http: HttpClient) {}
@@ -16,9 +20,11 @@ export class UsuarioService {
 	}
 
 	save(usuario: Usuario) {
-		return this._http.post<Usuario>(UsuarioService.RESOURCE_PATH + 'signup',
-				JSON.stringify(usuario),
-				{headers: new HttpHeaders({'Content-Type': 'application/json'})}).toPromise();
+		// return this._http.post<Usuario>(UsuarioService.RESOURCE_PATH + 'signup',
+		// 		JSON.stringify(usuario),
+		// 		{headers: new HttpHeaders({'Content-Type': 'application/json'})}).toPromise();
+		this.usuarios.push(usuario);
+		return true;
 	}
 
 	addUserToLocalStorege(usuario: Usuario) {

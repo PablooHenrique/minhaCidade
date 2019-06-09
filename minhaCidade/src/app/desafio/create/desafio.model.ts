@@ -4,6 +4,7 @@ export interface Desafio {
 	categoria?: string;
 	descricao?: string;
 	local?: string;
+	pontos?: string;
 
 	observacaoCriador?: string;
 	observacaoSolucionador?: string;

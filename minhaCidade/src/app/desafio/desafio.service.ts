@@ -7,13 +7,22 @@ import {Usuario} from '../user/user-create/usuario.model';
 export class DesafioService {
 	private static RESOURCE_PATH = 'https://anuardaher.com/minhagoiania/';
 
+	desafios: Desafio[] = [
+		{id: 1, categoria: 'Jardinagem', descricao: 'Aparar a grama', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
+		{id: 1, categoria: 'Jardinagem', descricao: 'Plantar Arvore', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
+		{id: 2, categoria: 'Pintura', descricao: 'Pintar o banco', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
+		{id: 3, categoria: 'Limpeza', descricao: 'Remover o lixo', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' }
+	];
+
 	constructor(private _http: HttpClient) {}
 
 	save(desafio: Desafio) {
-		const usuario = JSON.parse(localStorage.getItem('usuario')) as Usuario;
-		return this._http.post<Usuario>(DesafioService.RESOURCE_PATH + 'issue/' + usuario.id,
-				JSON.stringify(desafio),
-				{headers: new HttpHeaders({'Content-Type': 'application/json'})}).toPromise();
+		this.desafios.push(desafio);
+		return true;
+		// const usuario = JSON.parse(localStorage.getItem('usuario')) as Usuario;
+		// return this._http.post<Usuario>(DesafioService.RESOURCE_PATH + 'issue/' + usuario.id,
+		// 		JSON.stringify(desafio),
+		// 		{headers: new HttpHeaders({'Content-Type': 'application/json'})}).toPromise();
 	}
 
 	listaByUserId(desafio: Desafio) {
