@@ -7,11 +7,12 @@ import {Usuario} from '../user/user-create/usuario.model';
 export class DesafioService {
 	private static RESOURCE_PATH = 'https://anuardaher.com/minhagoiania/';
 
-	desafios: Desafio[] = [
-		{id: 1, categoria: 'Jardinagem', descricao: 'Aparar a grama', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
-		{id: 1, categoria: 'Jardinagem', descricao: 'Plantar Arvore', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
-		{id: 2, categoria: 'Pintura', descricao: 'Pintar o banco', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' },
-		{id: 3, categoria: 'Limpeza', descricao: 'Remover o lixo', local: 'Praça do Sol', pontos: '+ 15', observacaoCriador: '' }
+	desafios: any[] = [
+		{titulo: 'Cortar Grama',moeda:'2', diasAtivo: '5', img: 'assets/imagens/praça-grama.jpg' },
+		{titulo: 'Pintar banco',moeda:'6', diasAtivo: '15', img: 'assets/imagens/praça-grama.jpg' },
+		{titulo: 'Plantar árvore', moeda:'3',diasAtivo: '4', img: 'assets/imagens/praça-grama.jpg' },
+		{titulo: 'Trocar lâmpada queimada',moeda:'5', diasAtivo: '11', img: 'assets/imagens/praça-grama.jpg' },
+		{titulo: 'Limpar entulho',moeda:'1', diasAtivo: '1', img: 'assets/imagens/praça-grama.jpg' }
 	];
 
 	constructor(private _http: HttpClient) {}

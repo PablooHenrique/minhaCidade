@@ -14,26 +14,25 @@ export class DetailMeuDesafioPage {
 
 	}
 
-
 	adiconarFoto() {
-		if (Capacitor.isPluginAvailable('Camera')) {
-			Plugins.Camera.getPhoto({
-				quality: 50,
-				source: CameraSource.Prompt,
-				correctOrientation: true,
-				height: 320,
-				width: 200,
-				resultType: CameraResultType.Base64
-			}
-			).then(imagem => {
-				this.imagemAtual = imagem.base64String;
-			}
-
-			).catch(error => {
-				console.log(error)
-
-			}
-			)
-		}
+		// if (Capacitor.isPluginAvailable('Camera')) {
+		// 	Plugins.Camera.getPhoto({
+		// 		quality: 50,
+		// 		source: CameraSource.Prompt,
+		// 		correctOrientation: true,
+		// 		height: 320,
+		// 		width: 200,
+		// 		resultType: CameraResultType.Base64
+		// 	}
+		// 	).then(imagem => {
+		// 		this.imagemAtual = imagem.base64String;
+		// 	}
+		//
+		// 	).catch(error => {
+		// 		console.log(error)
+		//
+		// 	}
+		// 	)
+		// }
 	}
 }

@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 	styleUrls: ['desafios-create.page.scss']
 })
 export class DesafiosCreatePage {
-	desafio: Desafio = {pontos: '+ 15'};
+	desafio: any = {img: 'assets/imagens/praça-grama.jpg'};
 
 	constructor(private _desafioService: DesafioService, private _toast: ToastController, private _router: Router) {
 	}
@@ -19,7 +19,7 @@ export class DesafiosCreatePage {
 		const saved = this._desafioService.save(this.desafio);
 		if (saved) {
 			this.showToast('Desafio criado com sucesso.');
-			this._router.navigate(['/desafio-list']);
+			this._router.navigate(['/tabs']);
 			console.log(this._desafioService.desafios);
 		}
 	}
