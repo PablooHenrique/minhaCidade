@@ -7,6 +7,7 @@ import { Tab1Page } from '../tab1/tab1.page';
 import { Tab2Page } from '../tab2/tab2.page';
 import { Tab3Page } from '../tab3/tab3.page';
 import { ParceirosPage } from '../parceiros/parceiros.page.';
+import {DesafioListPage} from '../desafio/list/desafio-list.page';
 
 const routes: Routes = [
 	{
@@ -20,6 +21,10 @@ const routes: Routes = [
 	{
 		path: 'tab-1',
 		component: Tab1Page,
+	},
+	{
+		path: 'desafio-list',
+		component: DesafioListPage,
 	},
 	{
 		path: 'conquistas',

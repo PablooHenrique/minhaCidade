@@ -12,6 +12,10 @@ export class RootPage {
 
 	}
 
+	login() {
+		this.router.navigate(['/desafio-list']);
+	}
+
 	cadastrarUsuario() {
 		this.router.navigate(['/user-create']);
 	}
