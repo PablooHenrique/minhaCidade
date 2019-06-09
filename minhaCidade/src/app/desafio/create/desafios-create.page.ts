@@ -1,4 +1,8 @@
 import {Component} from '@angular/core';
+import {Desafio} from './desafio.model';
+import {DesafioService} from '../desafio.service';
+import {ToastController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
 	selector: 'app-desafio-create',
@@ -6,5 +10,25 @@ import {Component} from '@angular/core';
 	styleUrls: ['desafios-create.page.scss']
 })
 export class DesafiosCreatePage {
+	desafio: Desafio;
 
+	constructor(private _desafioService: DesafioService, private _toast: ToastController, private _router: Router) {
+	}
+
+	async save() {
+		this._desafioService.save(this.desafio).then(response => {
+			this.showToast('Desafio criado com sucesso.');
+			this._router.navigate(['/desafio-list']);
+		});
+	}
+
+	async showToast(msg: string) {
+		const toast = await this._toast.create({
+			message: msg,
+			duration: 2000,
+			position: 'top'
+		});
+
+		toast.present();
+	}
 }

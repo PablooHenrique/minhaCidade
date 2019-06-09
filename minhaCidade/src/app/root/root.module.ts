@@ -14,6 +14,9 @@ import {PerfilPage} from '../perfil/perfil.page';
 import {TabsPage} from '../tabs/tabs.page';
 import {DesafiosCreatePage} from '../desafio/create/desafios-create.page';
 import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-create-finished.page';
+import {Usuario} from '../user/user-create/usuario.model';
+import {UsuarioService} from '../user/user-create/usuario.service';
+import {DesafioService} from '../desafio/desafio.service';
 
 @NgModule({
 	imports: [
@@ -33,7 +36,7 @@ import {DesafiosCreateFinishedPage} from '../desafio/create-finished/desafios-cr
 		PerfilPage,
 		TabsPage
 	],
-	providers: [LoginService]
+	providers: [LoginService, UsuarioService, DesafioService]
 
 })
 export class RootPageModule {}

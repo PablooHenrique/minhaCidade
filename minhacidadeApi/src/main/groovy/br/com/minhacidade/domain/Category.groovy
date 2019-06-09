@@ -7,6 +7,7 @@ import javax.persistence.Id
 
 @Entity
 class Category {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id

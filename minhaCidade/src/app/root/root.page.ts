@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {LoginService} from '../services/login.service';
+import {UsuarioService} from '../user/user-create/usuario.service';
+import {ToastController} from '@ionic/angular';
 
 @Component({
 	selector: 'app-root',
@@ -9,14 +10,31 @@ import {LoginService} from '../services/login.service';
 })
 export class RootPage {
 
-	constructor(private router: Router, private _loginService: LoginService) {}
+	cpf: string;
+	senha: string;
 
-	login() {
-		this.router.navigate(['/tabs']);
+	constructor(private _router: Router, private _userService: UsuarioService, private _toast: ToastController) {}
+
+	async login() {
+		this._userService.login(this.cpf, this.senha).then(response => {
+			this._userService.addUserToLocalStorege(response);
+			this.showToast('Login efetuado com sucesso');
+			this._router.navigate(['/tabs']);
+		});
+	}
+
+	async showToast(msg: string) {
+		const toast = await this._toast.create({
+			message: msg,
+			duration: 2000,
+			position: 'top'
+		});
+
+		toast.present();
 	}
 
 	cadastrarUsuario() {
-		this.router.navigate(['/user-create']);
+		this._router.navigate(['/user-create']);
 	}
 
 }
