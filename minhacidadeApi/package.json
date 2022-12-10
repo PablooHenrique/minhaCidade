@@ -20,7 +20,7 @@
         "cors": "^2.8.5",
         "dialogflow": "^0.8.2",
         "dialogflow-fulfillment": "git+https://github.com/naranjja/dialogflow-fulfillment-nodejs.git",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "express-load": "^1.1.16",
         "express-session": "^1.16.1",
         "jade": "^1.11.0",
